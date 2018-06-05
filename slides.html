@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>How to Get Started with Machine Learning</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style type="text/css">
+      @import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,400i,700|Roboto+Slab|Roboto:400,400i,700,700i');
+
+      body { 
+        font-family: 'Roboto Slab', serif;
+        text-rendering: optimizeLegibility;
+      }
+      img { max-width: 80%; }
+
+      h1, h2, h3 {
+        font-family: 'Roboto', sans-serif;
+        font-weight: normal;
+        margin-bottom: 0;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Roboto Mono', monospace; }
+      .remark-code-line-highlighted     { background-color: #373832; }
+
+      .large { font-size: 2em; }
+      .small { font-size: 1em; }
+
+      .remark-slide-content h1 { font-size: 3em; }
+      .remark-slide-content h2 { font-size: 2em; }
+      .remark-slide-content h3 { font-size: 1.6em; }
+      .footnote {
+        position: absolute;
+        bottom: 3em;
+      }
+      li p { line-height: 1.25em; }
+      .red { color: #fa0000; }
+      a, a > code {
+        color: rgb(249, 38, 114);
+        text-decoration: none;
+      }
+      code {
+        background: #e7e8e2;
+        border-radius: 5px;
+      }
+      .pull-left {
+        float: left;
+        width: 47%;
+      }
+      .pull-right {
+        float: right;
+        width: 47%;
+      }
+      .pull-right ~ p {
+        clear: both;
+      }
+      #slideshow .slide .content code {
+        font-size: 0.8em;
+      }
+      #slideshow .slide .content pre code {
+        font-size: 0.9em;
+        padding: 15px;
+      }
+      .inverse {
+        background: #272822;
+        color: #777872;
+        text-shadow: 0 0 20px #333;
+      }
+      .inverse h1, .inverse h2 {
+        color: #f3f3f3;
+        line-height: 0.8em;
+      }
+
+      /* Two-column layout */
+      .left-column {
+        color: #777;
+        width: 20%;
+        height: 92%;
+        float: left;
+      }
+        .left-column h2:last-of-type, .left-column h3:last-child {
+          color: #000;
+        }
+      .right-column {
+        width: 75%;
+        float: right;
+        padding-top: 1em;
+      }      
+    </style>
+  </head>
+  <body onload="var slideshow = remark.create({ratio: '16:9', highlightLines: true});">
+    <textarea id="source">
+
+class: center, middle
+
+# Tools to Get Started with Machine Learning / AI
+## Christian Hudon | JDA Labs
+
+.footnote[Twitter: @christian_hudon and @JDALabsMTL]
+
+---
+# You think machine learning is cool
+&nbsp;
+
+.middle[
+<video height="400" autoplay loop alt="Not Hotdog, as seen on HBO">
+  <source src="img/Not_Hotdog.webm" type="video/webm">
+</video>
+]
+
+---
+# You've taken a first online class
+
+![](img/Coursera_Deep.png)
+
+---
+class: center
+
+# But what about after that?
+
+--
+
+## Maybe you have a first project idea...
+
+--
+
+## (Or maybe not.)
+
+???
+* That's cool. We'll also have some suggestions for good first projects in here later.
+
+---
+class: center, middle
+
+# Let's Get Started!
+
+???
+# First, pick a deep learning library
+
+---
+class: center, middle
+
+![](img/libraries_word_mural.png)
+
+???
+Well. ok. Let's put that off a bit, and start by visualizing our data instead.
+
+Amazon: MXNet
+Baidu: PaddlePaddle
+Facebook: PyTorch
+Google: TensorFlow
+Microsoft: CNTK / Microsoft Cognitive Toolkit
+Tencent: FeatherCNN
+
+Collage of the names of: theano, lasagne, nolearn, Keras, Pylearn2, Blocks, Caffe, Mxnet, CNTK, Torch7, Pytorch, Sklearn-theano.
+
+---
+.center[![Python Visualization Landscape](img/python_viz_landscape.png)]
+
+???
+* Worse.
+* Easier to pick once experienced, but if you're starting out...
+
+
+---
+class: center, middle
+
+# Who is this presentation for?
+
+???
+* No ML experience necesary, but ML not taught here
+* A little bit of programming experience
+* Not afraid to get feet wet
+
+* Gets you started. Initial selection of tools and starter project suggestions
+* Beginner-friendly tools (not necessarily what we use here)
+* Python (that's what I know best / deep learning research happening in Python)
+
+Giving you a good starting point to continue learning on your own.
+
+---
+class: center, middle
+
+# Trying things out:
+
+# Jupyter Lab
+
+???
+* Born out of reproductible science movement
+* Runnable document
+* Code, text, plots, equations in same document
+* Lab: big brother, ready for use (stable plugin API: 1.0)
+
+---
+class: center, middle
+
+# Numerical computations: 
+
+# Numpy
+
+???
+* The standard foundation in Python for numerical work
+* Other libarries either built on top, or work with Numpy.
+* Similar to Matlab...
+
+---
+class: center, middle
+
+# Data Exploration: 
+
+# Pandas
+
+???
+* Data cleaning and exploration a significant part of the work!
+* Pandas
+ * Easy to use yet powerful
+ * Very good support for dates, categoricals
+
+---
+class: center, middle
+
+# Classical machine learning: 
+
+# Scikit-learn
+# For NIP: SpaCy
+
+???
+* Easy to use, models know how to train themselves
+* Large number of algorithms
+* Excellent documentation
+* Ability to work with sequence of preprocessings + model as a composite model (pipelines)
+
+---
+class: center, middle
+
+# Deep learning:
+
+# Pytorch (and Skorch)
+
+.footnote[.red[*] Keras (with Tensorflow) also a reasonable choice.]
+
+???
+* Created by Facebook; rapid growth in use
+* Fairly often described as "fun"
+* Easier to understand causes of errors
+* Skorch: makes it easy to replace scikit-learn model
+* Keras and TensorFlow: harder to debug problems, but new "immediate" mode helps
+
+---
+class: center, middle
+
+# Visualization (simpler / pre-canned):
+
+# Pandas &amp; Seaborn
+
+???
+* Quick and easy!
+* For the basics
+
+---
+class: center, middle
+
+# Visualization (expressive):
+
+# HoloViews (or Altair)
+
+???
+* Easy to try complex plots quickly
+ * One of the good ideas of R
+ * Difference between 1-line plots and 1 paragraph ones!
+* Great for visually exploring your data
+* HoloViews:
+ * Interactive plots in browser
+ * Scalable to huge datasets with `datashader` 
+
+Be picky about your visualization library! Invest the time!
+
+---
+class: center, middle
+
+# How to continue learning?
+
+## Do a project!
+
+---
+
+# Dataset Sources
+
+* The Open Data movement (Bixi, etc.)
+
+--
+
+* Kaggle
+
+--
+
+* Your own life! (FitBit, your bank)
+
+--
+
+* The Internet!
+
+---
+
+# Project Ideas
+
+* Forecast Bixi usage
+
+--
+
+* Cat vs. dog detector
+
+--
+
+* Automated categorization of credit card bill items
+
+???
+
+* Reinforcement learning not a good first project.
+* Landing near the top of the Kaggle leaderboard needs different skills.
+* Creating trading models that make money has gotchas.
+
+---
+
+# After your first project
+
+* Getting better at Python: https://www.youtube.com/playlist?list=PLu5kChXP9Hipqr1gIROxGlvb3YVadOjUB (14 videos currently)
+
+* Learning the basics of classes and object-oriented programming: http://www.greenteapress.com/thinkpython/html/thinkpython016.html (and next two chapters)
+
+* The matrix algebra you need for machine learning: http://parrt.cs.usfca.edu/doc/matrix-calculus/
+
+* Scaling with [Dask](https://dask.pydata.org/en/latest/) and [Dask-ml](https://dask-ml.readthedocs.io/en/latest/) and [Dask-Kubernetes](https://dask-kubernetes.readthedocs.io/en/latest/)
+
+* Learning the basics of SQL
+
+---
+
+.pull-left[
+## Thank you!
+
+Slides and notebooks: http://christianhudon.name/talks/#DSDT-2018-06
+]
+
+
+.pull-right[
+## Tools
+
+* Trying things out: **Jupyter Lab**
+
+* Numerical computations: **Numpy**
+
+* Data Exploration: **Pandas**
+
+* Classical machine learning: **Scikit-learn** (and SpaCy)
+
+* Deep learning: **Pytorch** (and Skorch)
+
+* Visualization: **Pandas** and **Seaborn**
+
+* More Visualization: **HoloViews** (or Altair)
+]
+
+
+    </textarea>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js" type="text/javascript">
+    </script>
+  </body>
+</html>
