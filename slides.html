@@ -85,8 +85,8 @@
       }      
     </style>
   </head>
-  <body onload="var slideshow = remark.create({ratio: '16:9', highlightLines: true});">
-    <textarea id="source">
+  <body>
+    <textarea id="source" style="visibility: hidden">
 
 class: center, middle
 
@@ -362,5 +362,8 @@ Slides and notebooks: http://christianhudon.name/talks/#DSDT-2018-06
     </textarea>
     <script src="https://remarkjs.com/downloads/remark-latest.min.js" type="text/javascript">
     </script>
-  </body>
+    <script>
+        var slideshow = remark.create({ratio: '16:9', highlightLines: true});
+    </script>
+ </body>
 </html>
